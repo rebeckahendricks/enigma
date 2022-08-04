@@ -31,11 +31,8 @@ describe Enigma do
   end
 #~~~~incomplete specs below~~~~#
   xit 'can encrypt a message with a key (uses todays date)' do
-    encrypted = {
-      encryption: ,
-      key: ,
-      date:
-      }
+    encrypted = {}
+    
       #probable mocks & stubs here
     expect(@enigma.encrypt("hello world", "02715")).to eq(encrypted)
   end
