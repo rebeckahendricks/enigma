@@ -6,7 +6,7 @@ describe Enigma do
     @enigma = Enigma.new
   end
 
-  xit 'exists' do
+  it 'exists' do
     expect(@enigma).to be_instance_of(Enigma)
   end
 end
