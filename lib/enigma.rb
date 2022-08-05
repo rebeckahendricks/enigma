@@ -17,20 +17,44 @@ class Enigma
     message.chars.each_with_index do |char, index|
       if index % 4 == 0
         shifted_character_set = @character_set.rotate(a_shift)
-        message[index] = "A"
-        # message[index] = shifted_character_set[character_set_index]
+        character_set_index = 0
+        @character_set.each_with_index do |char2, index2|
+          if char == char2
+            character_set_index = index2
+          end
+        end
+        character_set_index
+        message[index] = shifted_character_set[character_set_index]
       elsif index % 4 == 1
         shifted_character_set = @character_set.rotate(b_shift)
-        # message[index] = shifted_character_set[character_set_index]
-        message[index] = "B"
+        character_set_index = 0
+        @character_set.each_with_index do |char2, index2|
+          if char == char2
+            character_set_index = index2
+          end
+        end
+        character_set_index
+        message[index] = shifted_character_set[character_set_index]
       elsif index % 4 == 2
         shifted_character_set = @character_set.rotate(c_shift)
-        # message[index] = shifted_character_set[character_set_index]
-        message[index] = "C"
+        character_set_index = 0
+        @character_set.each_with_index do |char2, index2|
+          if char == char2
+            character_set_index = index2
+          end
+        end
+        character_set_index
+        message[index] = shifted_character_set[character_set_index]
       elsif index % 4 == 3
         shifted_character_set = @character_set.rotate(d_shift)
-        # message[index] = shifted_character_set[character_set_index]
-        message[index] = "D"
+        character_set_index = 0
+        @character_set.each_with_index do |char2, index2|
+          if char == char2
+            character_set_index = index2
+          end
+        end
+        character_set_index
+        message[index] = shifted_character_set[character_set_index]
       end
     end
 
