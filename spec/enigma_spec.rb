@@ -10,7 +10,7 @@ describe Enigma do
     expect(@enigma).to be_instance_of(Enigma)
   end
 
-  xit 'can encrypt a message with a key and date' do
+  it 'can encrypt a message with a key and date' do
     expected = {
       encryption: "keder ohulw",
       key: "02715",
@@ -32,7 +32,7 @@ describe Enigma do
 #~~~~incomplete specs below~~~~#
   xit 'can encrypt a message with a key (uses todays date)' do
     encrypted = {}
-    
+
       #probable mocks & stubs here
     expect(@enigma.encrypt("hello world", "02715")).to eq(encrypted)
   end
