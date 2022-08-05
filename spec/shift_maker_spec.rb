@@ -28,4 +28,5 @@ describe ShiftMaker do
     expect(@enigma.c_shift).to eq(73)
     expect(@enigma.d_shift).to eq(20)
   end
+
 end

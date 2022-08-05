@@ -48,4 +48,8 @@ module ShiftMaker
   def d_shift
     d_key.to_i + d_offset.to_i
   end
+
+  # def shifted_character_set
+  # end
+
 end
