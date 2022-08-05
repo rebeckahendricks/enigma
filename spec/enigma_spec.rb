@@ -56,7 +56,7 @@ describe Enigma do
     expect(@enigma.decrypt("keder ohulw", "02715", "040895")).to eq(expected)
   end
 
-  xit 'can decrypt a message with a key (uses todays date)' do
+  it 'can decrypt a message with a key (uses todays date)' do
     encrypted = @enigma.encrypt("hello world", "02715")
     decrypted = {
       decryption: "hello world",
