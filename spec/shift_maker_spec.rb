@@ -8,14 +8,14 @@ describe ShiftMaker do
     allow(@enigma).to receive(:date).and_return('040822')
   end
 
-  xit 'can create keys' do
+  it 'can create keys' do
     expect(@enigma.a_key).to eq('12')
     expect(@enigma.b_key).to eq('23')
     expect(@enigma.c_key).to eq('34')
     expect(@enigma.d_key).to eq('45')
   end
 
-  xit 'can create offsets' do
+  it 'can create offsets' do
     expect(@enigma.a_offset).to eq('5')
     expect(@enigma.b_offset).to eq('6')
     expect(@enigma.c_offset).to eq('8')

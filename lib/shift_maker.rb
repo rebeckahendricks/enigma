@@ -18,14 +18,19 @@ module ShiftMaker
   end
 
   def a_offset
+    (@date.to_i * @date.to_i).to_s.chars.last(4).join[0]
   end
 
   def b_offset
+    (@date.to_i * @date.to_i).to_s.chars.last(4).join[1]
   end
 
   def c_offset
+    (@date.to_i * @date.to_i).to_s.chars.last(4).join[2]
   end
 
   def d_offset
+    (@date.to_i * @date.to_i).to_s.chars.last(4).join[3]
   end
+
 end
