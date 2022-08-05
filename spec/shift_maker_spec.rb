@@ -4,6 +4,7 @@ require './lib/enigma'
 describe ShiftMaker do
   before do
     @enigma = Enigma.new
+    #This stub is not functioning, methods appear to be working.
     allow(@enigma).to receive(:@key).and_return('12345')
     allow(@enigma).to receive(:date).and_return('040822')
   end
@@ -22,10 +23,10 @@ describe ShiftMaker do
     expect(@enigma.d_offset).to eq('4')
   end
 
-  xit 'can create shifts' do
-    expect(@enigma.a_shift).to eq('17')
-    expect(@enigma.b_shift).to eq('29')
-    expect(@enigma.c_shift).to eq('42')
-    expect(@enigma.d_shit).to eq('49')
+  it 'can create shifts' do
+    expect(@enigma.a_shift).to eq(17)
+    expect(@enigma.b_shift).to eq(29)
+    expect(@enigma.c_shift).to eq(42)
+    expect(@enigma.d_shit).to eq(49)
   end
 end
