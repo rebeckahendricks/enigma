@@ -11,13 +11,11 @@ class Enigma
   end
 
   def encrypt(message, key = @key, date = @date)
-    # encrypted_message = "keder ohulw"
-
     shifted_character_set = []
+    character_set_index = 0
     message.chars.each_with_index do |char, index|
       if index % 4 == 0
         shifted_character_set = @character_set.rotate(a_shift)
-        character_set_index = 0
         @character_set.each_with_index do |char2, index2|
           if char == char2
             character_set_index = index2
@@ -27,7 +25,6 @@ class Enigma
         message[index] = shifted_character_set[character_set_index]
       elsif index % 4 == 1
         shifted_character_set = @character_set.rotate(b_shift)
-        character_set_index = 0
         @character_set.each_with_index do |char2, index2|
           if char == char2
             character_set_index = index2
@@ -37,7 +34,6 @@ class Enigma
         message[index] = shifted_character_set[character_set_index]
       elsif index % 4 == 2
         shifted_character_set = @character_set.rotate(c_shift)
-        character_set_index = 0
         @character_set.each_with_index do |char2, index2|
           if char == char2
             character_set_index = index2
@@ -47,7 +43,6 @@ class Enigma
         message[index] = shifted_character_set[character_set_index]
       elsif index % 4 == 3
         shifted_character_set = @character_set.rotate(d_shift)
-        character_set_index = 0
         @character_set.each_with_index do |char2, index2|
           if char == char2
             character_set_index = index2
