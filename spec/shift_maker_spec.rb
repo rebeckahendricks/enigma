@@ -4,9 +4,8 @@ require './lib/enigma'
 describe ShiftMaker do
   before do
     @enigma = Enigma.new
-    #This stub is not functioning, methods appear to be working.
-    allow(@enigma).to receive(:@key).and_return('12345')
-    allow(@enigma).to receive(:date).and_return('040822')
+    @enigma.instance_variable_set(:@key, '12345')
+    @enigma.instance_variable_set(:@date, '040822')
   end
 
   it 'can create keys' do
@@ -27,6 +26,6 @@ describe ShiftMaker do
     expect(@enigma.a_shift).to eq(17)
     expect(@enigma.b_shift).to eq(29)
     expect(@enigma.c_shift).to eq(42)
-    expect(@enigma.d_shit).to eq(49)
+    expect(@enigma.d_shift).to eq(49)
   end
 end
