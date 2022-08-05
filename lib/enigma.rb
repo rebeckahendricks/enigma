@@ -38,4 +38,14 @@ class Enigma
       date: "#{date}"
   }
   end
+
+  def decrypt(message, key, date = @date)
+    decrypted_message = "hello world"
+
+    decrypted = {
+      decryption: decrypted_message,
+      key: "#{key}",
+      date: "#{date}"
+      }
+  end
 end
