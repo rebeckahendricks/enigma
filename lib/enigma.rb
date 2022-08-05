@@ -1,7 +1,7 @@
-require './key_maker'
+require './lib/shift_maker'
 
 class Enigma
-  include KeyMaker
+  include ShiftMaker
   attr_reader :date, :key
 
   def initialize
