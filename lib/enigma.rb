@@ -1,4 +1,7 @@
+require './key_maker'
+
 class Enigma
+  include KeyMaker
   attr_reader :date, :key
 
   def initialize
@@ -13,4 +16,5 @@ class Enigma
       date: "#{date}"
   }
   end
+
 end
