@@ -10,7 +10,10 @@ class Enigma
     @key = rand(99999).to_s.rjust(5, "0")
   end
 
-  def encrypt(message, key = @key, date = @date)
+  def encrypt(message, key = nil, date = nil)
+    @key = key if key
+    @date = date if date
+
     shifted_character_set = []
     message.chars.each_with_index do |char, index|
       if index % 4 == 0
@@ -34,12 +37,14 @@ class Enigma
 
     encrypted = {
       encryption: message,
-      key: "#{key}",
-      date: "#{date}"
+      key: "#{@key}",
+      date: "#{@date}"
   }
   end
 
-  def decrypt(message, key = @key, date = @date)
+  def decrypt(message, key = nil, date = nil)
+    @key = key if key
+    @date = date if date
 
     shifted_character_set = []
     message.chars.each_with_index do |char, index|
@@ -64,8 +69,8 @@ class Enigma
 
     decrypted = {
       decryption: message,
-      key: "#{key}",
-      date: "#{date}"
+      key: "#{@key}",
+      date: "#{@date}"
       }
   end
 end

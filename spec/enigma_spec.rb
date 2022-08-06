@@ -4,8 +4,6 @@ require 'date'
 describe Enigma do
   before do
     @enigma = Enigma.new
-    @enigma.instance_variable_set(:@key, '02715')
-    @enigma.instance_variable_set(:@date, '040895')
   end
 
   it 'exists' do
@@ -57,6 +55,7 @@ describe Enigma do
   end
 
   it 'can decrypt a message with a key (uses todays date)' do
+    @enigma.instance_variable_set(:@date, '040895')
     encrypted = @enigma.encrypt("hello world", "02715")
     decrypted = {
       decryption: "hello world",
@@ -64,7 +63,6 @@ describe Enigma do
       date: "040895"
       }
 
-    @enigma.instance_variable_set(:@date, '040895')
     expect(@enigma.decrypt(encrypted[:encryption], "02715")).to eq(decrypted)
   end
 end

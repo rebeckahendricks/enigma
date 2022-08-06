@@ -9,7 +9,7 @@ message = handle.read
 handle.close
 
 decrypted_message = enigma.decrypt(message, ARGV[2], ARGV[3])
-
+require "pry"; binding.pry
 writer = File.open(ARGV[1], "w")
 
 writer.write(decrypted_message[:decryption])
