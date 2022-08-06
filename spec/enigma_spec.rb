@@ -18,7 +18,7 @@ describe Enigma do
       }
 
     expect(@enigma.encrypt("hello world", "02715", "040895")).to eq(encrypted)
-    expect(@enigma.encrypt("Hello! World!", "02715", "040895")).to eq({encryption: "keder! ohulw!", key: "02715", date: "040895"})
+    expect(@enigma.encrypt("Hello! World!", "02715", "040895")).to eq({encryption: "keder!sprrdx!", key: "02715", date: "040895"})
   end
 
   it 'can encrypt a message with a key (uses todays date)' do
@@ -30,7 +30,7 @@ describe Enigma do
 
     @enigma.instance_variable_set(:@date, '040895')
     expect(@enigma.encrypt("hello world", "02715")).to eq(encrypted)
-    expect(@enigma.encrypt("Hello! World!", "02715", "040895")).to eq({encryption: "keder! ohulw!", key: "02715", date: "040895"})
+    expect(@enigma.encrypt("Hello! World!", "02715", "040895")).to eq({encryption: "keder!sprrdx!", key: "02715", date: "040895"})
   end
 
   it 'can encrypt a message (generates random key and uses todays date)' do
@@ -43,7 +43,7 @@ describe Enigma do
     @enigma.instance_variable_set(:@key, '02715')
     @enigma.instance_variable_set(:@date, '040895')
     expect(@enigma.encrypt("hello world")).to eq(encrypted)
-    expect(@enigma.encrypt("Hello! World!", "02715", "040895")).to eq({encryption: "keder! ohulw!", key: "02715", date: "040895"})
+    expect(@enigma.encrypt("Hello! World!", "02715", "040895")).to eq({encryption: "keder!sprrdx!", key: "02715", date: "040895"})
   end
 
   it 'can decrypt a message with a key and date' do
