@@ -54,6 +54,7 @@ describe Enigma do
       }
 
     expect(@enigma.decrypt("keder ohulw", "02715", "040895")).to eq(expected)
+    expect(@enigma.decrypt("keder!sprrdx!", "02715", "040895")).to eq({decryption: "hello! world!", key: "02715", date: "040895"})
   end
 
   it 'can decrypt a message with a key (uses todays date)' do
@@ -66,5 +67,6 @@ describe Enigma do
       }
 
     expect(@enigma.decrypt(encrypted[:encryption], "02715")).to eq(decrypted)
+    expect(@enigma.decrypt("keder!sprrdx!", "02715", "040895")).to eq({decryption: "hello! world!", key: "02715", date: "040895"})
   end
 end
