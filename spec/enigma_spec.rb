@@ -45,7 +45,7 @@ describe Enigma do
     @enigma.instance_variable_set(:@date, '040895')
     expect(@enigma.encrypt("hello world")).to eq(encrypted)
   end
-  #~~~~incomplete specs below~~~~
+
   it 'can decrypt a message with a key and date' do
     expected = {
       decryption: "hello world",

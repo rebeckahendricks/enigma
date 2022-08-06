@@ -15,4 +15,4 @@ writer = File.open(ARGV[1], "w")
 writer.write(decrypted_message[:decryption])
 writer.close
 
-puts "Created #{ARGV[1]} with the key #{ARGV[2]} and date #{ARGV[3]}."
+puts "Created #{ARGV[1]} with the key #{decrypted_message[:key]} and date #{decrypted_message[:date]}."
