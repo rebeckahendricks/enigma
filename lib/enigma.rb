@@ -39,8 +39,8 @@ class Enigma
   }
   end
 
-  def decrypt(message, key, date = @date)
-  
+  def decrypt(message, key = @key, date = @date)
+
     shifted_character_set = []
     message.chars.each_with_index do |char, index|
       if index % 4 == 0
