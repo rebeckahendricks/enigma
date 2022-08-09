@@ -7,7 +7,7 @@ handle = File.open(ARGV[0], "r")
 message = handle.read
 handle.close
 
-encrypted_message = enigma.encrypt(message.chomp)
+encrypted_message = enigma.encrypt(message.chomp, ARGV[2], ARGV[3])
 
 writer = File.open(ARGV[1], "w")
 
