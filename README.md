@@ -8,7 +8,7 @@ Version Control - Meets Expectations
 
 Comments:
   Functionality
-    Using the command line interface, I can demonstrate that the encrypt and decrypt methods in the Enigma class are functioning properly.  I have not (yet) attempted the cracking method.
+    Using the command line interface, I can demonstrate that the encrypt and decrypt methods in the Enigma class are functioning properly.  I have not attempted the cracking method.
 
   Object Oriented Programming
     I utilized one module (ShiftMaker) in a logical way. The purpose of this module is to calculate the shifts with a given key and date. These calculations are then used in the encrypt and decrypt method in the Enigma class. This keeps the encrypt and decrypt methods to a single responsibility of actually encrypting and decrypting using the calculations done by ShiftMaker module.

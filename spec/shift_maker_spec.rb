@@ -1,3 +1,4 @@
+require './spec/spec_helper'
 require './lib/shift_maker'
 require './lib/enigma'
 
